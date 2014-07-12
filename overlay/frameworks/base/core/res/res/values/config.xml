@@ -20,7 +20,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- If this is true, the screen will fade off. -->
-    <bool name="config_animateScreenLights">false</bool>
+    <bool name="config_animateScreenLights">true</bool>
 
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
@@ -43,12 +43,19 @@
     <integer-array name="config_autoBrightnessLevels">
         <item>1</item>
         <item>4</item>
+	<item>10</item>
         <item>40</item>
+	<item>120</item>
         <item>350</item>
+	<item>470</item>
         <item>600</item>
+        <item>810</item>
         <item>1000</item>
+        <item>1250</item>
         <item>1600</item>
+        <item>2200</item>
         <item>3000</item>
+        <item>6200</item>
         <item>10000</item>
     </integer-array>
 
@@ -59,13 +66,20 @@
     <integer-array name="config_autoBrightnessLcdBacklightValues">
         <item>13</item>   <!-- 0-1 -->
         <item>26</item>   <!-- 1-4 -->
-        <item>73</item>   <!-- 4-40 -->
-        <item>88</item>   <!-- 40-350 -->
-        <item>130</item>  <!-- 350-600 -->
-        <item>167</item>  <!-- 600-1000 -->
-        <item>204</item>  <!-- 1000-1600 -->
-        <item>240</item>  <!-- 1600-3000 -->
-        <item>254</item>  <!-- 3000-10000 -->
+	<item>32</item>	  <!-- 4-10 -->
+        <item>73</item>   <!-- 10-40 -->
+        <item>80</item>   <!-- 40-120 -->
+        <item>88</item>   <!-- 120-350 -->
+        <item>105</item>  <!-- 350-470 -->
+        <item>130</item>  <!-- 470-600 -->
+        <item>154</item>  <!-- 600-810 -->
+        <item>167</item>  <!-- 810-1000 -->
+        <item>190</item>  <!-- 1000-1250 -->
+        <item>204</item>  <!-- 1250-1600 -->
+        <item>221</item>  <!-- 1600-2200 -->
+        <item>240</item>  <!-- 2200-3000 -->
+        <item>248</item>  <!-- 3000-6200 -->
+        <item>254</item>  <!-- 6200-10000 -->
         <item>255</item>  <!-- 10000+ -->
     </integer-array>
 
@@ -91,11 +105,11 @@
 
     <!-- Default screen brightness setting.
          Must be in the range specified by minimum and maximum. -->
-    <integer name="config_screenBrightnessSettingDefault">82</integer>
+    <integer name="config_screenBrightnessSettingDefault">140</integer>
 
     <!-- Minimum screen brightness setting allowed by the power manager.
          The user is forbidden from setting the brightness below this level. -->
-    <integer name="config_screenBrightnessSettingMinimum">1</integer>
+    <integer name="config_screenBrightnessSettingMinimum">10</integer>
 
     <!-- If this is true, the screen will come on when you unplug usb/power/whatever. -->
     <bool name="config_unplugTurnsOnScreen">true</bool>
@@ -117,10 +131,10 @@
     <color name="config_defaultNotificationColor">#ffffffff</color>
 
     <!-- Default LED on time for notification LED in milliseconds. -->
-    <integer name="config_defaultNotificationLedOn">1000</integer>
+    <integer name="config_defaultNotificationLedOn">2000</integer>
 
     <!-- Default LED off time for notification LED in milliseconds. -->
-    <integer name="config_defaultNotificationLedOff">9000</integer>
+    <integer name="config_defaultNotificationLedOff">8000</integer>
 
     <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveBatteryLed">true</bool>
@@ -232,28 +246,28 @@
          if the sensor HAL correctly handles the proximity sensor as a wake-up source.
          Otherwise, the device may fail to wake out of suspend reliably.
          The default is false. -->
-    <bool name="config_suspendWhenScreenOffDueToProximity">true</bool>
+    <bool name="config_suspendWhenScreenOffDueToProximity">false</bool>
 
     <!-- Vibrator pattern for feedback about a long screen/key press -->
     <integer-array name="config_longPressVibePattern">
         <item>0</item>
         <item>7</item>
-        <item>10</item>
+        <item>8</item>
     </integer-array>
 
     <!-- Make things go fast -->
-    <bool name="config_ui_enableFadingMarquee">false</bool>
+    <bool name="config_ui_enableFadingMarquee">true</bool>
 
     <!-- Vibrator pattern for feedback about touching a virtual key -->
     <integer-array name="config_virtualKeyVibePattern">
         <item>0</item>
         <item>5</item>
-        <item>10</item>
+        <item>8</item>
     </integer-array>
 
     <!-- Vibrator pattern for a very short but reliable vibration for soft keyboard tap -->
     <integer-array name="config_keyboardTapVibePattern">
-        <item>10</item>
+        <item>8</item>
     </integer-array>
 
     <!-- Wifi driver supports batched scan -->
